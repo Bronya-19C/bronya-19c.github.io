@@ -1,0 +1,534 @@
+<!DOCTYPE html><html lang="cn" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>做题记录2.0（Senior） | bronya-19c's blog</title><meta name="keywords" content="record"><meta name="author" content="lbylby"><meta name="copyright" content="lbylby"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="做题记录1.0（Junior）因为神秘原因烂尾了，就不续写了。 主要是流水账，记录一下高中的做题情况。 初三过后太颓了，天天抽机，好彩坐在 gzw 旁边搞了一个星期 OI ，勉强能忍住不颓了。 就从开学就停课的第二周记起吧。 20212021.99.13 Mon.早上挑了两道简单题做，然后是想 lgj 的题，一个早上愣是没yy出啥，自己还是太蠢了。  主席树上二分（也可以整体二分或分块）：LG-P">
+<meta property="og:type" content="article">
+<meta property="og:title" content="做题记录2.0（Senior）">
+<meta property="og:url" content="http://bronya-19c.github.io/2022/03/04/diary/index.html">
+<meta property="og:site_name" content="bronya-19c&#39;s blog">
+<meta property="og:description" content="做题记录1.0（Junior）因为神秘原因烂尾了，就不续写了。 主要是流水账，记录一下高中的做题情况。 初三过后太颓了，天天抽机，好彩坐在 gzw 旁边搞了一个星期 OI ，勉强能忍住不颓了。 就从开学就停课的第二周记起吧。 20212021.99.13 Mon.早上挑了两道简单题做，然后是想 lgj 的题，一个早上愣是没yy出啥，自己还是太蠢了。  主席树上二分（也可以整体二分或分块）：LG-P">
+<meta property="og:locale">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2022-03-04T12:50:39.000Z">
+<meta property="article:modified_time" content="2022-03-04T12:52:46.975Z">
+<meta property="article:author" content="lbylby">
+<meta property="article:tag" content="record">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://bronya-19c.github.io/2022/03/04/diary/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '做题记录2.0（Senior）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-03-04 20:52:46'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="bronya-19c's blog" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">bronya-19c's blog</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">做题记录2.0（Senior）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-03-04T12:50:39.000Z" title="Created 2022-03-04 20:50:39">2022-03-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-03-04T12:52:46.975Z" title="Updated 2022-03-04 20:52:46">2022-03-04</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="做题记录2.0（Senior）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>做题记录1.0（Junior）因为神秘原因烂尾了，就不续写了。</p>
+<p>主要是流水账，记录一下高中的做题情况。</p>
+<p>初三过后太颓了，天天抽机，好彩坐在 <code>gzw</code> 旁边搞了一个星期 OI ，勉强能忍住不颓了。</p>
+<p>就从开学就停课的第二周记起吧。</p>
+<h1 id="2021"><a href="#2021" class="headerlink" title="2021"></a>2021</h1><h2 id="2021-9"><a href="#2021-9" class="headerlink" title="2021.9"></a>2021.9</h2><h2 id="9-13-Mon"><a href="#9-13-Mon" class="headerlink" title="9.13 Mon."></a>9.13 Mon.</h2><p>早上挑了两道简单题做，然后是想 <code>lgj</code> 的题，一个早上愣是没yy出啥，自己还是太蠢了。</p>
+<ul>
+<li><p>主席树上二分（也可以整体二分或分块）：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/57936223">LG-P7554 [COCI2020-2021#6] Index</a></p>
+</li>
+<li><p>dp of dp：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/57939298">CF808G Anthem of Berland</a></p>
+<p>正解是kmp + dp，懒人直接上个dp套kmp自动机 $O(10 ^ 7|\sum|)$ 卡过了……</p>
+</li>
+</ul>
+<p>下午日常状态低迷……，<code>lgj</code> 的题还是没思路，于是又挑了道水题浪费时间。</p>
+<ul>
+<li>转化为数逆序对：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/57949185">LG-P7868 [COCI2015-2016#2] VUDU</a></li>
+</ul>
+<p>晚上严重降智，代码调了半天。</p>
+<ul>
+<li><p>新套路，区间对应连边用 st 表：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/57965285">LG-P3295 [SCOI2016]萌萌哒</a></p>
+</li>
+<li><p>费马小定理，简单推式子，细节有点多：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/57975465">LG-P1397 [NOI2013] 矩阵游戏</a></p>
+</li>
+</ul>
+<h2 id="9-14-Tues"><a href="#9-14-Tues" class="headerlink" title="9.14 Tues."></a>9.14 Tues.</h2><ul>
+<li><p>莫比乌斯反演：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/57984003">P3911 最小公倍数之和</a></p>
+<p>主要是之前AGC有道更强版本，双倍经验罢了，但同时也发现一些东西。</p>
+<p>$$f(n) &#x3D; \sum_{d | n} \mu(\frac{n}{d})g(d)$$</p>
+<p>$$f(n) &#x3D; \sum_{d | n} \mu(d)g(\frac{n}{d})$$</p>
+<p>这两样东西本质是一样的，但交换顺序计算却不同，例如 $g(n) &#x3D; \frac{1}{n}$ 则：</p>
+<p>$$f(n) &#x3D; \sum_{d | n} \mu(\frac{n}{d})\frac{1}{d}$$</p>
+<p>$$f(n) &#x3D; \sum_{d | n} \mu(d)\frac{d}{n}$$</p>
+<p>显然如果没有取模，肯定是下面的式子好做。</p>
+</li>
+<li><p>容斥 or 二项式反演：<a target="_blank" rel="noopener" href="https://atcoder.jp/contests/abc217/tasks/abc217_g">ABC217G Groups</a></p>
+<p>没有用二项式反演，因为题目求所有的恰好，顺着做，挨个减即可。</p>
+<p>坑点是样例全是 $n\bmod m &#x3D; 0$ ，显然每一类数的个数是相等的。但是我在计算这些个数的时候少打了一个等号，偏偏只会在 $n \bmod m \neq 0$ 会错，所以啊，自己<strong>手动造样例</strong>很重要！1</p>
+</li>
+<li><p>简单背包，我却一度分析错复杂度…….：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/57991938">P7552 [COCI2020-2021#6] Anagramistica</a></p>
+</li>
+<li><p>数论，置换：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/57996593">P6280 [USACO20OPEN]Exercise G</a> ,     <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/57996720">P4161 [SCOI2009]游戏</a></p>
+</li>
+</ul>
+<p>晚上学了下斜率优化，由于自己<strong>几何</strong>方面极其薄弱，模板题写得很痛苦。</p>
+<p>麻了，数学不行，要看看书了。</p>
+<p>而且发现现在只会做一眼题了，怎么感觉最近很难深入思考啊，今天只有早上写了题……</p>
+<p>补充：白天还白嫖了牛客的课程，虽然讲的是前缀和，但是自己的理解更深刻了，支持结合律和可逆的操作都可以用前缀和（卷积，满秩矩阵等）。</p>
+<h2 id="9-15-Wed"><a href="#9-15-Wed" class="headerlink" title="9.15 Wed."></a>9.15 Wed.</h2><ul>
+<li><p>缩点，与 树剖 + 线段树 or 差分: <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/CF555E">CF555E Case of Computer Network</a></p>
+<p>两种做法都写了，差分一开始想错了，写了1h的错解，甚至还因此怀疑自己学了假的差分，后面贺了题解才知……</p>
+</li>
+<li><p>差分：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/58041009">P4552 [Poetize6] IncDec Sequence</a></p>
+<p>差分贞德好用 o(￣▽￣)ｄ ！</p>
+</li>
+<li><p>括号匹配，线段树合并：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/58049752">P7323 [WC2021] 括号路径</a></p>
+<p>做法想一下就知道了，就是一个合法括号序列不是 $(…)$ ，就是 $(…)(…)$ 。</p>
+<p>第二种并查集即可。</p>
+<p>但鸽了 $n$ 天还是不知道怎么拓展第一种，贺了才知道这是个很 $naive$ 的问题。</p>
+</li>
+<li><p>搜素，数论：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/58053784">P1463 [POI2001][HAOI2007]反素数</a> ， <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/58063772">P1574 超级数</a></p>
+<p>性质题，但后者值域扩大 + 多测，所以要先搜完个表，然后询问查表即可。</p>
+</li>
+</ul>
+<h2 id="9-16-Thur"><a href="#9-16-Thur" class="headerlink" title="9.16 Thur."></a>9.16 Thur.</h2><ul>
+<li><p>区间线性基：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/58085928">CF1100F Ivan and Burgers</a></p>
+<p>线段树维护是 $O(n\log n ^ 3)$ 的，但考虑离线的话，其实能搞出线性基 <strong>在当前时间内</strong> 每一位存的数的 <strong>最晚</strong> 时间，在插入时 swap 即可，至于为什么是对的，画多几个样例应该就懂了。套个主席树就能 $O(n\log n ^ 2)$ 在线做了。</p>
+</li>
+<li><p>性质题，线性基：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/58086808">P4151 [WC2011]最大XOR和路径</a></p>
+<p>异或与环优美的共同点与结合，有时间补题解。</p>
+</li>
+<li><p>决策单调性？：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/58092758">P6932 [ICPC2017 WF]Money for Nothing</a></p>
+<p>脑残了，只想到卖家价格随时间单调下降，居然没发现买家也是单调下降，%%%klii 。</p>
+</li>
+<li><p>性质题，构造：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/58102075">CF1515F Phoenix and Earthquake</a></p>
+<p>结论不难想，从整体考虑即可，我居然卡在构造方案上了，果然脑子还要多练点。</p>
+</li>
+</ul>
+<p>晚上评讲 <code>lgj</code> 的题，趁着讲课把最后一题 A 了。长教训了，以后见到排列就往图上想。</p>
+<p>甚至还一度分析错完全背包的复杂度，以为是 $O(n ^ 3)$ 的，实际上是 $O(n\sum_i cnt_i)$ 的，然后题目刚好 $\sum_i cnt_i &#x3D; n$ ，麻了。</p>
+<p>总之，计数题来来回回不外乎容斥，一一对应的转换成好计算的状态，钦定啥之类的。</p>
+<p>还是太菜了。。。。</p>
+<hr>
+<h2 id="没错我又咕咕咕了！1"><a href="#没错我又咕咕咕了！1" class="headerlink" title="没错我又咕咕咕了！1"></a>没错我又咕咕咕了！1</h2><h2 id="2021-11"><a href="#2021-11" class="headerlink" title="2021.11"></a>2021.11</h2><h3 id="2021-11-4-Thur"><a href="#2021-11-4-Thur" class="headerlink" title="2021.11.4 Thur."></a>2021.11.4 Thur.</h3><ul>
+<li><p>莫队二离 + 根号分治：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/61687616">P5398 [Ynoi2018] GOSICK</a></p>
+<p>卡常题 <del>一个早上</del>，学到了很多技巧。 <del>你见过阀值调到50的根号分治吗</del></p>
+</li>
+<li><p>积性函数，组合数学：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/61698999">CF757E Bash Plays with Functions</a></p>
+</li>
+</ul>
+<hr>
+<p>一口气补了几天。。。</p>
+<hr>
+<h2 id="2021-11-5-Fri"><a href="#2021-11-5-Fri" class="headerlink" title="2021.11.5 Fri."></a>2021.11.5 Fri.</h2><ul>
+<li><p>耐心分析讨论 + 递归 + 差分 + 二分：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/61758950">[AGC003E] Sequential operations on Sequence</a></p>
+</li>
+<li><p>哈希 + 复杂度分析：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/61781607">CF1056E Check Transcription</a></p>
+</li>
+</ul>
+<h2 id="2021-11-6-Sat"><a href="#2021-11-6-Sat" class="headerlink" title="2021.11.6 Sat."></a>2021.11.6 Sat.</h2><ul>
+<li><p>生成函数 + 组合数学：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/61841802">P5488 差分与前缀和</a></p>
+<p>从生成函数角度看：前缀和可以看成是卷上 $\frac{1}{1 - x}$ ，差分可以看成是乘上 $1 - x$ 。</p>
+<p>然后 $k$ 阶差分展开很简单，就是二项式定理，但前缀和要用到广义二项式定理，记结论吧。</p>
+<p>$$(\frac{1}{1 - x}) ^ k &#x3D; \sum_{i&#x3D;0}^{\infty}\dbinom{k + i - 1}{k - 1}x^i$$</p>
+</li>
+</ul>
+<h2 id="2021-11-6-Sun"><a href="#2021-11-6-Sun" class="headerlink" title="2021.11.6 Sun."></a>2021.11.6 Sun.</h2><p>快乐周日当然刷板啦。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/61950513">P4782 【模板】2-SAT 问题</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/61953179">P5431 【模板】乘法逆元 2</a></p>
+<p>发现就是维护个前缀后缀积的 $trick$ ，不知道为啥以前的我不会。。。</p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/61986557">P7112 【模板】行列式求值</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/62019212">P5632 【模板】Stoer-Wagner算法</a></p>
+<p><del>总结一下，这周有点颓，下周继续卷。</del></p>
+<hr>
+<p>鸽子咕到了noip结束……懒得补了……</p>
+<hr>
+<h2 id="2021-11-23-Tue"><a href="#2021-11-23-Tue" class="headerlink" title="2021.11.23 Tue."></a>2021.11.23 Tue.</h2><ul>
+<li><p>有趣的状压题（预处理优化暴力）： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63401218">AT2365 [AGC012E] Camel and Oases</a></p>
+</li>
+<li><p>差分，贪心，dp： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63401817">P7962 [NOIP2021] 方差【民间数据】</a></p>
+</li>
+<li><p>线段树合并优化dp： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63435041">CF671D Roads in Yusland</a></p>
+</li>
+<li><p>莫队+bitset+根号分治： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63450902">P5355 [Ynoi2017] 由乃的玉米田</a></p>
+<p><del>又是阀值很小，只有64的根号分治 ，直接拼个线段树草过了。</del></p>
+<p>看题解发现我是傻逼，线段树根本不用，维护个前缀 $\max$ 即可。</p>
+</li>
+<li><p>李超树： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63457236">P4655 [CEOI2017]Building Bridges</a></p>
+<p>斜率优化：我不做人啦JOJO！</p>
+</li>
+</ul>
+<h2 id="2021-11-24-Wed"><a href="#2021-11-24-Wed" class="headerlink" title="2021.11.24 Wed."></a>2021.11.24 Wed.</h2><ul>
+<li><p>树剖+线段树套李超树 <del>（树套树套树）</del>：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63470500">P4069 [SDOI2016]游戏</a></p>
+<p>不知道为啥 $\log^3$ 跑得飞快，再次见证树剖的小常数。</p>
+</li>
+<li><p><del>李超</del>线段树合并：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63472413">CF932F Escape Through Leaf</a></p>
+<p>主要是复杂度分析，分两块考虑：线段树合并自身是一个 $\log$ ，每条线段在李超树中会在 插入&#x2F;合并 两个过程中不断下放，也最多下放 $\log n$ 次 ，所以复杂度是 $O(n \log n)$ 。</p>
+</li>
+<li><p>第二类斯特林数，组合数学： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63475415">CF932E Team Work</a></p>
+</li>
+<li><p>预测，期望dp：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63507790">CF441E Valera and Number</a></p>
+</li>
+</ul>
+<h2 id="2021-11-25-Thur"><a href="#2021-11-25-Thur" class="headerlink" title="2021.11.25 Thur."></a>2021.11.25 Thur.</h2><ul>
+<li><p>斯特林数： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63540538">P6620 [省选联考 2020 A 卷] 组合数问题</a> </p>
+</li>
+<li><p>线段树sb题： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63541128">CF1567E Non-Decreasing Dilemma</a></p>
+</li>
+<li><p>性质，结论： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63546919">CF1567F One-Four Overload</a></p>
+<p>被标签骗了，一直往 <code>2-SAT</code> 方面想，事实证明做提前不能看标签。</p>
+</li>
+<li><p>组合数学水题： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63550918">CF893E Counting Arrays</a></p>
+</li>
+<li><p>组合数学，枚举： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/52881/post-mei-ju-pu-li-p3166-cqoi2014-shuo-san-jiao-xing">$\bigodot$</a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63554491">P3166 [CQOI2014]数三角形</a></p>
+</li>
+<li><p>分块，卡常： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63594051">P5356 [Ynoi2017] 由乃打扑克</a></p>
+<p>没想到一个小优化能快两倍。</p>
+</li>
+</ul>
+<h2 id="2021-11-26-Fri"><a href="#2021-11-26-Fri" class="headerlink" title="2021.11.26 Fri."></a>2021.11.26 Fri.</h2><ul>
+<li>状压，卡常： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/52881/dpp6622-xing-xuan-lian-kao-2020-ab-juan-xin-hao-zhuan-di">$\bigodot$</a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63601541">P6622 [省选联考 2020 A&#x2F;B 卷] 信号传递</a></li>
+</ul>
+<hr>
+<p>周末好摸……</p>
+<hr>
+<h2 id="2021-11-29-Mon"><a href="#2021-11-29-Mon" class="headerlink" title="2021.11.29 Mon."></a>2021.11.29 Mon.</h2><p>写了两场比赛的题 + ejoi2020的一半。</p>
+<ul>
+<li>主席树： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63933079">CF893F Subtree Minimum Query</a></li>
+</ul>
+<h2 id="2021-11-30-Tue"><a href="#2021-11-30-Tue" class="headerlink" title="2021.11.30 Tue."></a>2021.11.30 Tue.</h2><p>补ejoi2020。</p>
+<ul>
+<li><p>树分治： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63958020">CF342E Xenia and Tree</a></p>
+<p>贺标签才想起点分治，离线后点分治上个树状数组即可，还可以建出点分树在线做，还少一个 $\log$ 。</p>
+</li>
+<li><p>构造，鸽巢原理： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/63962557">CF1450C2 Errich-Tac-Toe (Hard Version)</a></p>
+<p>发现在 $\texttt{jiangly}$ 的论文里有，过几天看看。</p>
+</li>
+</ul>
+<h1 id="12月"><a href="#12月" class="headerlink" title="12月"></a>12月</h1><h2 id="2021-12-1-Wed"><a href="#2021-12-1-Wed" class="headerlink" title="2021.12.1 Wed."></a>2021.12.1 Wed.</h2><p>找点水题做做。</p>
+<ul>
+<li><p>？？？： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64009278">[ARC092B] Two Sequences</a></p>
+<p>跟异或有关的题都是拆位考虑，另外值域连续的话不需要上 <code>trie</code> 树，两个二分就行。</p>
+</li>
+<li><p>“树论”： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64011159">CF1527D MEX Tree</a></p>
+<p>很显然就是要求必然经过点 $0,1,…,x-1$ 且不经过 $x$ 的路径数，分类讨论一波可做。但是题解的实现更优秀，直接容斥就把 不经过 这个条件去掉了，我还是太菜了。</p>
+</li>
+<li><p>贪心： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64011633">CF1553D Backspace</a></p>
+<p>看出 $T$ 中每个字符在 $S$ 中的位置的奇偶是确定的就没了。</p>
+</li>
+<li><p>复杂度分析： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64012998">CF1553F Pairwise Modulo</a></p>
+<p>没看到 $a_i$ 互不相同，于是有个根号分治 + 值域分块的做法。</p>
+<p>疑惑为什么难度只有2300，点开题解才发现看漏条件了，互不相同的话均摊就是调和级数了，直接上个树状数组就好。</p>
+</li>
+<li><p>贪心： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64017356">CF675E Trains and Statistic</a></p>
+<p>通过贪心可以建出一棵树，然后很好算贡献了。</p>
+</li>
+<li><p>并查集，“树论”： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64022843">CF1156D 0-1-Tree</a></p>
+<p>感觉这种计数思路很好想啊，题解却用了奇怪的dp，懒得看了。</p>
+</li>
+<li><p>组合数学水题： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64024395">CF689E Mike and Geometry Problem</a></p>
+</li>
+<li><p>DDP： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64062424">P4332 [SHOI2014]三叉神经树</a></p>
+<p>忘了<code>LCT</code>怎么维护虚子树信息……写了个俩 $\log$ 的树剖+set，一直WA两个点，竟然是一些地方没初始化。</p>
+</li>
+</ul>
+<h2 id="2021-12-2-Thur"><a href="#2021-12-2-Thur" class="headerlink" title="2021.12.2 Thur."></a>2021.12.2 Thur.</h2><ul>
+<li><p>DS：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64071844">P7963 [NOIP2021] 棋局</a></p>
+<p>改了几天才发现是 $opt &#x3D; 1$ 的地方处理错了，碰到棋子提前 break 了。</p>
+</li>
+<li><p>DS：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64073278">P2839 [国家集训队]middle</a></p>
+<p>中位数，众数相关转化成 0(-1) &#x2F; 1 的套路。</p>
+</li>
+<li><p>DS：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64085619">CF1539F Strange Array</a></p>
+<p>同上。</p>
+</li>
+</ul>
+<p><del>以下补于12.14……</del></p>
+<ul>
+<li><p>最短路： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64087706">CF1473E Minimum Path</a></p>
+<p>又碰到了这类题，就是放宽题目的限制，多了些冗余的，不合法的量，使得更容易计算，但是按照解法一定不会取到多出来的东西。</p>
+</li>
+<li><p>数论，并查集： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64089469">CF1516D Cut</a></p>
+<p>套路题， $ab,bc$ 是平方数，则 $ac$ 也是。</p>
+</li>
+<li><p>贪心，数学：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64107086">CF1538G Gift Set</a></p>
+<p>从贪心和代数的角度都可做，懒得写，<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/luo1gu1zui1bang1/solution-cf1538g">直接丢同学的了</a>。</p>
+</li>
+<li><p>斜率优化板子： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64127675">P3628 [APIO2010]特别行动队</a></p>
+</li>
+</ul>
+<h2 id="2021-12-3-Fri"><a href="#2021-12-3-Fri" class="headerlink" title="2021.12.3 Fri."></a>2021.12.3 Fri.</h2><ul>
+<li><p>笛卡尔树DP： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64134641">CF1515E Phoenix and Computers</a></p>
+<p>又是一类根据连通块DP的题。</p>
+</li>
+<li><p>概率期望： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64140103">CF1349D Slime and Biscuits</a>‘</p>
+<p>不同于传统期望的题。（还可以用<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/appleblue17/yang-yu-ting-shi-ding-li-xue-xi-bi-ji">鞅与停时定理</a>做）</p>
+</li>
+</ul>
+<h2 id="2021-12-4-12-6-Sat-Sun-Mon"><a href="#2021-12-4-12-6-Sat-Sun-Mon" class="headerlink" title="2021.12.4~12.6 Sat.Sun.Mon."></a>2021.12.4~12.6 Sat.Sun.Mon.</h2><p>周末依然摸……然后刷了一套KSN2021的题（还欠了一道。。。</p>
+<p>绿题都做那么久……于是写了篇<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/52881/ksn2021-post">总结</a>以示耻辱。</p>
+<ul>
+<li><p>结论，DS：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/52881/ds-xing-zhi-ti-p5069-ynoi2015-zong-shi-ri-bao-xi-shan">$\bigodot$</a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64419334">P5069 [Ynoi2015] 纵使日薄西山</a></p>
+<p>结论没看出来，贺的。。。但是好像没人用线段树做唉，水了个篇题解和最优解第一 o(<em>￣▽￣</em>)ブ。</p>
+</li>
+<li><p>$\texttt{SOSDP}$： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64435214">CF165E Compatible Numbers</a></p>
+</li>
+<li><p>$\texttt{SOSDP}$： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64440415">CF383E Vowels</a></p>
+</li>
+<li><p>$\texttt{SOSDP}$： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64446043">CF449D Jzzhu and Numbers</a></p>
+</li>
+</ul>
+<h2 id="2021-12-7-Tue"><a href="#2021-12-7-Tue" class="headerlink" title="2021.12.7 Tue."></a>2021.12.7 Tue.</h2><ul>
+<li><p>$\texttt{SOSDP}$： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64463885">P6442 [COCI2011-2012#6] KOŠARE</a></p>
+</li>
+<li><p>$\texttt{SOSDP}$，差分： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64465430">CF772D Varying Kibibits</a></p>
+<p>$\texttt{SOSDP}$ 好题，就是先差分再容斥回来，牛b。</p>
+</li>
+<li><p>$\texttt{SOSDP}$ ： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/list?pid=SP8372&user=52881">SP8372 TSUM - Triple Sums</a></p>
+</li>
+</ul>
+<p>做了挺多的了，算是对 $\texttt{SOSDP}$ （高维前缀和）有了深入的理解了。</p>
+<p>然后理解了 $\texttt{FMT}$ （快速莫比乌斯）本质就是容斥，先高维前缀和再高维差分回来。</p>
+<p>然后还是没搞 $\texttt{FWT}$ （快速沃尔什变换）</p>
+<ul>
+<li>$\texttt{FFT}$ 加速字符串匹配： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64485476">CF528D Fuzzy Search</a></li>
+</ul>
+<h2 id="2021-12-8-Wed"><a href="#2021-12-8-Wed" class="headerlink" title="2021.12.8 Wed."></a>2021.12.8 Wed.</h2><ul>
+<li><p>莫队+bitset，状态压缩：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/52881/post-mu-dui-zhuang-tai-ya-su-p4688-ynoi2016-diao-jin-tu-zi-dong">$\bigodot$</a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64530459">P4688 [Ynoi2016] 掉进兔子洞</a></p>
+<p>好题！</p>
+</li>
+<li><p>搜索： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64535061">CF1612F Armor and Weapons</a></p>
+<p>发现增长速度是斐波那契，最多 $\log n$ 步就到上界，于是果断打爆搜，卡了半天常，结果最后是剪了枝马上就过了。。。</p>
+<p>其实正解是 $\texttt{DP}$ 。。。然后浪费了一个早上 \fn</p>
+</li>
+<li><p>构造： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64559488">P5248 [LnOI2019SP]快速多项式变换(FPT)</a></p>
+<p>好玩。</p>
+</li>
+<li><p>容斥，DS：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/blog/52881/ds-rong-chi-p4692-ynoi2016-shui-di-meng">$\bigodot$</a> <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64574437">P4692 [Ynoi2016] 谁的梦</a></p>
+<p>Ynoi好玩！</p>
+</li>
+</ul>
+<h2 id="2021-12-9-Thur"><a href="#2021-12-9-Thur" class="headerlink" title="2021.12.9 Thur."></a>2021.12.9 Thur.</h2><ul>
+<li><p>构造，二分图： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64593926">CF741C Arpa’s overnight party and Mehrdad’s silent entering</a></p>
+<p>yyc被这题卡了 \jk</p>
+</li>
+<li><p>组合数学，多项式； <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64594083">P5641 【CSGRound2】开拓者的卓识</a></p>
+</li>
+<li><p>矩阵快速幂，多项式： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64594083">CF755G PolandBall and Many Other Balls</a></p>
+<p>还可以倍增 $\texttt{NTT}$ 做。</p>
+</li>
+<li><p>倍增 $\texttt{FTT}$ ： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64598993">CF623E Transforming Sequence</a></p>
+<p>恶心出题人怎么给的是任意模数啊。。。</p>
+</li>
+<li><p>莫队二离板子： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64612113">P5501 [LnOI2019]来者不拒，去者不追</a></p>
+</li>
+<li><p>树分块： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64639741">P2325 [SCOI2005]王室联邦</a></p>
+<p>这种分块方式块的大小在 $[B,3B)$ 内。</p>
+</li>
+<li><p>分块，数论： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64648068">P4108 [HEOI2015]公约数数列</a></p>
+<p>对序列做前缀 $\gcd$ 最多只有 $\log$ 个。</p>
+</li>
+</ul>
+<p><del>以下补于12.15……</del></p>
+<h2 id="2021-12-10-Fri"><a href="#2021-12-10-Fri" class="headerlink" title="2021.12.10 Fri."></a>2021.12.10 Fri.</h2><ul>
+<li><p>根号分治建图： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64659895">P3645 [APIO2015]雅加达的摩天楼</a></p>
+</li>
+<li><p>差分： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64686067">CF1110E Magic Stones</a></p>
+<p>$\texttt{NOIP2021 T3}$ 的套路。</p>
+</li>
+<li><p>多项式乘法 $\texttt{NTT}$ ： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64688704">P5395 第二类斯特林数·行</a></p>
+</li>
+</ul>
+<hr>
+<p>周末还是很摸……</p>
+<hr>
+<h2 id="2021-12-11-Sat"><a href="#2021-12-11-Sat" class="headerlink" title="2021.12.11 Sat."></a>2021.12.11 Sat.</h2><ul>
+<li>生成函数，多项式乘法 $\texttt{NTT}$ ： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64741297">P5396 第二类斯特林数·列</a></li>
+</ul>
+<h2 id="2021-12-12-Sun"><a href="#2021-12-12-Sun" class="headerlink" title="2021.12.12 Sun."></a>2021.12.12 Sun.</h2><ul>
+<li><p>sb题： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64843581">CF1608A Find Array</a></p>
+</li>
+<li><p>莫比乌斯反演，欧拉定理： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64911915">P7486 「Stoi2031」彩虹</a></p>
+<p>现在乘法的莫反也搞定了（其实就是在指数上做莫反）。</p>
+</li>
+</ul>
+<h2 id="2021-12-13-Mon"><a href="#2021-12-13-Mon" class="headerlink" title="2021.12.13 Mon."></a>2021.12.13 Mon.</h2><ul>
+<li><p>DS： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64929143">CF1513F Swapping Problem</a></p>
+<p>就我sb，写了 $\log^2$ 的做法。</p>
+</li>
+<li><p>SOSDP： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64929723">SP13106 KOSARE - KOSARE</a></p>
+<p>其实是之前的双倍经验。。。。</p>
+</li>
+<li><p>莫反sb题： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64930147">SP26017 GCDMAT - GCD OF MATRIX</a></p>
+</li>
+<li><p>高维前缀和： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64931375">P5495 Dirichlet 前缀和</a></p>
+</li>
+<li><p>第二类斯特林数，多项式，范德蒙德卷积： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64955448">P2791 幼儿园篮球题</a></p>
+<p>先自然幂转下降幂，然后我还看了半天才发现是范德蒙德卷积……</p>
+</li>
+<li><p>容斥，组合数学： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64962013">P5339 [TJOI2019]唱、跳、rap和篮球</a></p>
+<p>生成函数推导 + $\texttt{NTT}$ 实现那部分被我直接用 $\texttt{DP}$ 冲过去了（</p>
+</li>
+<li><p>拉格朗日插值： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64969365">P4463 [集训队互测 2012] calc</a></p>
+<p>$\texttt{DP}$ 跟差分 &#x2F; 前缀和有关，并且状态巨大的考虑用拉插。</p>
+</li>
+</ul>
+<h2 id="2021-12-14-Tue"><a href="#2021-12-14-Tue" class="headerlink" title="2021.12.14 Tue."></a>2021.12.14 Tue.</h2><ul>
+<li><p>多项式乘法 $\texttt{NTT}$ ：<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64980233">P5667 拉格朗日插值2</a></p>
+<p>所以这种题算什么板子。。。感觉就是单纯推导出卷积式玩玩而已。</p>
+</li>
+<li><p>期望： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64981370">P1654 OSU!</a></p>
+</li>
+<li><p>递推，期望： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64982903">P4550 收集邮票</a></p>
+</li>
+<li><p>期望，组合数学： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64984393">P3802 小魔女帕琪</a></p>
+</li>
+<li><p>期望 $\texttt{DP}$ ： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/64997496">P1850 [NOIP2016 提高组] 换教室</a></p>
+</li>
+</ul>
+<p>总之就是期望的线性性很重要，经常要拆开单独算。</p>
+<p>晚上修新博客ing <del>中途还跳匝停电了……</del>。</p>
+<h2 id="2021-12-15-Wed"><a href="#2021-12-15-Wed" class="headerlink" title="2021.12.15 Wed."></a>2021.12.15 Wed.</h2><p>早上又修了下博客，感觉还行。</p>
+<ul>
+<li><p>枚举暴力，二分： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/65037692">P6441 [COCI2011-2012#6] PASTELE</a></p>
+<p>值域很小是关键，然后枚举答案搞个三维前缀和就行。</p>
+</li>
+<li><p>构造，随机化： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/65037692">CF1364E X-OR</a></p>
+<p>跟 <code>lah</code> 一人搞了一个解法，但也因此大半早上没了。</p>
+</li>
+<li><p>$\texttt{KMP}$： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/65043149">CF432D Prefixes and Suffixes</a></p>
+<p>$\texttt{exKMP}$ 也能做，一时脑抽把两个都用上了。</p>
+</li>
+<li><p>下午做了下 $\texttt{CF1608 Div.1+Div.2}$ 的题，再次觉得自己好蠢。</p>
+<ul>
+<li>构造： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/65050686">CF1608B Build the Permutation</a></li>
+</ul>
+<p>没想好就动手的后果————写半天。</p>
+<ul>
+<li><p>贪心构造： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/65050686">CF1608C Game Master</a></p>
+</li>
+<li><p>组合数学： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/65056386">CF1608D Dominoes</a></p>
+</li>
+</ul>
+</li>
+<li><p>组合数学： <a target="_blank" rel="noopener" href="https://www.luogu.com.cn/record/65065154">AT1983 [AGC001E] BBQ Hard</a></p>
+<p>手撕组合意义然后 $\texttt{DP}$ 。</p>
+</li>
+</ul>
+<h2 id="2021-12-16-Thur"><a href="#2021-12-16-Thur" class="headerlink" title="2021.12.16 Thur."></a>2021.12.16 Thur.</h2><p>看了一早上的微积分，算是弄懂了亿点点。 3b1b讲的真不戳。</p>
+<p>中午lah教了一个套路，大概就是边有边权，树上一个连通块的包含的所有边</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">lbylby</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://bronya-19c.github.io/2022/03/04/diary/">http://bronya-19c.github.io/2022/03/04/diary/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/record/">record</a></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/03/04/hello-world/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">lbylby</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">1</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/bronya-19c"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#2021"><span class="toc-number">1.</span> <span class="toc-text">2021</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-9"><span class="toc-number">1.1.</span> <span class="toc-text">2021.9</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-13-Mon"><span class="toc-number">1.2.</span> <span class="toc-text">9.13 Mon.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-14-Tues"><span class="toc-number">1.3.</span> <span class="toc-text">9.14 Tues.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-15-Wed"><span class="toc-number">1.4.</span> <span class="toc-text">9.15 Wed.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-16-Thur"><span class="toc-number">1.5.</span> <span class="toc-text">9.16 Thur.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B2%A1%E9%94%99%E6%88%91%E5%8F%88%E5%92%95%E5%92%95%E5%92%95%E4%BA%86%EF%BC%811"><span class="toc-number">1.6.</span> <span class="toc-text">没错我又咕咕咕了！1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-11"><span class="toc-number">1.7.</span> <span class="toc-text">2021.11</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2021-11-4-Thur"><span class="toc-number">1.7.1.</span> <span class="toc-text">2021.11.4 Thur.</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-11-5-Fri"><span class="toc-number">1.8.</span> <span class="toc-text">2021.11.5 Fri.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-11-6-Sat"><span class="toc-number">1.9.</span> <span class="toc-text">2021.11.6 Sat.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-11-6-Sun"><span class="toc-number">1.10.</span> <span class="toc-text">2021.11.6 Sun.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-11-23-Tue"><span class="toc-number">1.11.</span> <span class="toc-text">2021.11.23 Tue.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-11-24-Wed"><span class="toc-number">1.12.</span> <span class="toc-text">2021.11.24 Wed.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-11-25-Thur"><span class="toc-number">1.13.</span> <span class="toc-text">2021.11.25 Thur.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-11-26-Fri"><span class="toc-number">1.14.</span> <span class="toc-text">2021.11.26 Fri.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-11-29-Mon"><span class="toc-number">1.15.</span> <span class="toc-text">2021.11.29 Mon.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-11-30-Tue"><span class="toc-number">1.16.</span> <span class="toc-text">2021.11.30 Tue.</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12%E6%9C%88"><span class="toc-number">2.</span> <span class="toc-text">12月</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-12-1-Wed"><span class="toc-number">2.1.</span> <span class="toc-text">2021.12.1 Wed.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-12-2-Thur"><span class="toc-number">2.2.</span> <span class="toc-text">2021.12.2 Thur.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-12-3-Fri"><span class="toc-number">2.3.</span> <span class="toc-text">2021.12.3 Fri.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-12-4-12-6-Sat-Sun-Mon"><span class="toc-number">2.4.</span> <span class="toc-text">2021.12.4~12.6 Sat.Sun.Mon.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-12-7-Tue"><span class="toc-number">2.5.</span> <span class="toc-text">2021.12.7 Tue.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-12-8-Wed"><span class="toc-number">2.6.</span> <span class="toc-text">2021.12.8 Wed.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-12-9-Thur"><span class="toc-number">2.7.</span> <span class="toc-text">2021.12.9 Thur.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-12-10-Fri"><span class="toc-number">2.8.</span> <span class="toc-text">2021.12.10 Fri.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-12-11-Sat"><span class="toc-number">2.9.</span> <span class="toc-text">2021.12.11 Sat.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-12-12-Sun"><span class="toc-number">2.10.</span> <span class="toc-text">2021.12.12 Sun.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-12-13-Mon"><span class="toc-number">2.11.</span> <span class="toc-text">2021.12.13 Mon.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-12-14-Tue"><span class="toc-number">2.12.</span> <span class="toc-text">2021.12.14 Tue.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-12-15-Wed"><span class="toc-number">2.13.</span> <span class="toc-text">2021.12.15 Wed.</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2021-12-16-Thur"><span class="toc-number">2.14.</span> <span class="toc-text">2021.12.16 Thur.</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/03/04/diary/" title="做题记录2.0（Senior）"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="做题记录2.0（Senior）"/></a><div class="content"><a class="title" href="/2022/03/04/diary/" title="做题记录2.0（Senior）">做题记录2.0（Senior）</a><time datetime="2022-03-04T12:50:39.000Z" title="Created 2022-03-04 20:50:39">2022-03-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/04/hello-world/" title="Hello World"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2022/03/04/hello-world/" title="Hello World">Hello World</a><time datetime="2022-03-04T07:23:18.832Z" title="Created 2022-03-04 15:23:18">2022-03-04</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By lbylby</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
