@@ -6,7 +6,7 @@
   <link href="http://bronya-19c.github.io/atom.xml" rel="self"/>
   
   <link href="http://bronya-19c.github.io/"/>
-  <updated>2022-03-06T12:22:41.573Z</updated>
+  <updated>2022-03-06T12:32:24.333Z</updated>
   <id>http://bronya-19c.github.io/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="http://bronya-19c.github.io/2022/03/06/haha/"/>
     <id>http://bronya-19c.github.io/2022/03/06/haha/</id>
     <published>2022-03-06T10:46:29.000Z</published>
-    <updated>2022-03-06T12:22:41.573Z</updated>
+    <updated>2022-03-06T12:32:24.333Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="O-n-log-n-求-dbinom-n-0-dbinom-n-1-…-dbinom-n-n-1-dbinom-n-n"><a href="#O-n-log-n-求-dbinom-n-0-dbinom-n-1-…-dbinom-n-n-1-dbinom-n-n" class="headerlink" title="$O(n \log n)$ 求 $\dbinom{n}{0},\dbinom{n}{1},…,\dbinom{n}{n-1},\dbinom{n}{n}$"></a>$O(n \log n)$ 求 $\dbinom{n}{0},\dbinom{n}{1},…,\dbinom{n}{n-1},\dbinom{n}{n}$</h1><h2 id="一个问题"><a href="#一个问题" class="headerlink" title="一个问题"></a>一个问题</h2><p>有一个多项式 $F(x)$，已知所有项的系数为<strong>非负整数</strong>，你每次可以询问一个值 $y$，并得知 $F(y)$ 的值。</p><p>求最少多问少次能知道这个多项式的次数和各项的系数。</p><p><strong>答案是两次。</strong></p><p>实际上是把多项式看成一个 $n$ 进制数，其中 $n \gt$ 最大的系数。</p><p>那么第一次询问 $1$ 得到各项系数之和 $S$，第二次询问 $S+1$ 就能保证 任意系数 $\lt S+1$ 了，然后当 $S+1$ 进制处理即可。</p><p>是在知乎上看到的，<a href="https://www.zhihu.com/question/27547892/answer/131272696">原文</a>。</p><h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>可以构造 $(p+1)^n&#x3D;\sum_{i&#x3D;0}^{n} \dbinom{n}{i}p^i$ 。</p><p>瞧，回到上面的问题了，$p$ 直接取 $2^n$ 即可。</p><p>但是这只适用数据较小的情况，所以没啥用。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="O-n-求-dbinom-n-0-dbinom-n-1-…-dbinom-n-n-1-dbinom-n-n"><a href="#O-n-求-dbinom-n-0-dbinom-n-1-…-dbinom-n-n-1-dbinom-n-n" class="headerlink" title="$O(n)$ 求 $\dbinom{n}{0},\dbinom{n}{1},…,\dbinom{n}{n-1},\dbinom{n}{n}$"></a>$O(n)$ 求 $\dbinom{n}{0},\dbinom{n}{1},…,\dbinom{n}{n-1},\dbinom{n}{n}$</h1><h2 id="一个问题"><a href="#一个问题" class="headerlink" title="一个问题"></a>一个问题</h2><p>有一个多项式 $F(x)$，已知所有项的系数为<strong>非负整数</strong>，你每次可以询问一个值 $y$，并得知 $F(y)$ 的值。</p><p>求最少多问少次能知道这个多项式的次数和各项的系数。</p><p><strong>答案是两次。</strong></p><p>实际上是把多项式看成一个 $n$ 进制数，其中 $n \gt$ 最大的系数。</p><p>那么第一次询问 $1$ 得到各项系数之和 $S$，第二次询问 $S+1$ 就能保证 任意系数 $\lt S+1$ 了，然后当 $S+1$ 进制处理即可。</p><p>是在知乎上看到的，<a href="https://www.zhihu.com/question/27547892/answer/131272696">原文</a>。</p><h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>可以构造 $(p+1)^n&#x3D;\sum_{i&#x3D;0}^{n} \dbinom{n}{i}p^i$ 。</p><p>瞧，回到上面的问题了，$p$ 直接取 $2^n$ 即可。</p><p>但是这只适用数据较小的情况，所以没啥用。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;O-n-log-n-求-dbinom-n-0-dbinom-n-1-…-dbinom-n-n-1-dbinom-n-n&quot;&gt;&lt;a href=&quot;#O-n-log-n-求-dbinom-n-0-dbinom-n-1-…-dbinom-n-n-1-dbinom-n-n&quot; </summary>
+    <summary type="html">&lt;h1 id=&quot;O-n-求-dbinom-n-0-dbinom-n-1-…-dbinom-n-n-1-dbinom-n-n&quot;&gt;&lt;a href=&quot;#O-n-求-dbinom-n-0-dbinom-n-1-…-dbinom-n-n-1-dbinom-n-n&quot; class=&quot;heade</summary>
       
     
     
